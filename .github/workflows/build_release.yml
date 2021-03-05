@@ -28,8 +28,7 @@ jobs:
           filename: 'release.zip'
           exclusions: '*.git* /*node_modules/* .editorconfig'
           path: dist
-      - name: Upload Release
-          uses: ncipollo/release-action@v1
-          with:
-            artifacts: "release.zip"
-            token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: ncipollo/release-action@v1
+        with:
+          artifacts: "release.zip"
+          token: ${{ secrets.GITHUB_TOKEN }}
